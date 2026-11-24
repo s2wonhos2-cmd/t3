@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "image": "/images/gallery-1.jpg", "caption": "서로 다른 우리가 하나의 팀이 되어 함께 호흡하고 성장하는 곳", "alt": "T3.s 대회 단체 사진", "large": true },
+    { "image": "/images/gallery-2.jpg", "caption": "도전을 거듭하며 실전 경험과 성장의 기회를 얻을 수 있습니다", "alt": "T3.s 대회 경기 모습", "large": false },
+    { "image": "/images/gallery-3.jpg", "caption": "VICTAS배 리그전 - 매월 진행되는 동아리 내 대회", "alt": "T3.s VICTAS배 리그전", "large": false },
+    { "image": "/images/gallery-4.jpg", "caption": "대학 교류전에서 만나는 새로운 동료들", "alt": "T3.s 교류전", "large": false },
+    { "image": "/images/gallery-5.jpg", "caption": "전국대학탁구대회 - 경희대학교를 대표하여 출전", "alt": "T3.s 전국대학탁구대회", "large": true },
+    { "image": "/images/gallery-6.jpg", "caption": "연습과 강한 결속력으로 성장을 증명하는 사자", "alt": "T3.s 경기 장면", "large": false },
+    { "image": "/images/gallery-7.jpg", "caption": "탁구를 사랑하는 마음으로 하나 되는 시간", "alt": "T3.s 활동", "large": false },
+    { "image": "/images/gallery-8.jpg", "caption": "MT에서 함께 만드는 추억", "alt": "T3.s MT", "large": true },
+    { "image": "/images/gallery-9.jpg", "caption": "우리가 치는 공은 가볍지만, 그 진심과 땀의 무게는 결코 가볍지 않습니다", "alt": "T3.s 활동", "large": false },
+    { "image": "/images/gallery-10.jpg", "caption": "모두가 함께 성장하는 환경을 만들어가고 있습니다", "alt": "T3.s 활동", "large": false },
+    { "image": "/images/gallery-11.jpg", "caption": "경희대학교 탁구동아리의 열정", "alt": "T3.s 활동", "large": false },
+    { "image": "/images/gallery-12.jpg", "caption": "함께라서 더 즐거운 탁구", "alt": "T3.s 활동", "large": false }
+  ]
+}
