@@ -148,10 +148,20 @@ function renderGallery(items) {
     }));
 }
 
+function renderSiteImage(elId, data) {
+    // data가 없거나 image 값이 없으면 index.html에 적혀있는 기본 사진을 그대로 유지합니다.
+    if (!data || !data.image) return;
+    const img = document.getElementById(elId);
+    if (!img) return;
+    img.src = data.image;
+    if (data.alt) img.alt = data.alt;
+}
+
 async function loadSiteContent() {
-    const [awards, gallery] = await Promise.allSettled([
+    const [awards, gallery, siteImages] = await Promise.allSettled([
         loadJSON('/content/awards.json'),
-        loadJSON('/content/gallery.json')
+        loadJSON('/content/gallery.json'),
+        loadJSON('/content/site-images.json')
     ]);
 
     if (awards.status === 'fulfilled') {
@@ -165,6 +175,14 @@ async function loadSiteContent() {
         renderGallery(gallery.value.items);
     } else {
         console.error(gallery.reason);
+    }
+
+    if (siteImages.status === 'fulfilled') {
+        renderSiteImage('heroBgImage', siteImages.value.hero);
+        renderSiteImage('aboutImage', siteImages.value.about);
+        renderSiteImage('ambassadorImage', siteImages.value.ambassador);
+    } else {
+        console.error(siteImages.reason);
     }
 }
 
