@@ -1,28 +1,30 @@
 {
   "stats": [
-    { "number": "27", "label": "대회 출전" },
-    { "number": "26", "label": "입상 대회" },
-    { "number": "2025", "label": "중앙동아리 승격" }
+    {
+      "number": "27",
+      "label": "대회 출전"
+    },
+    {
+      "number": "26",
+      "label": "입상 대회"
+    },
+    {
+      "number": "2025",
+      "label": "중앙동아리 승격"
+    }
   ],
   "timeline": [
     {
-      "date": "2026.08",
-      "title": "한국학생선수권대회 단체전 준우승",
-      "description": "남자 단체전 상위부 준우승",
       "type": "award",
-      "highlight": false
-    },
-    {
-      "date": "2026.08",
-      "title": "한국학생선수권대회 우승",
-      "description": "남자 2부, 남자 3부, 남자 3부 복식 우승",
-      "type": "award",
-      "highlight": true
+      "highlight": false,
+      "date": "2026.11",
+      "title": "대학탁구 전국대회 입상",
+      "description": "남자 3부 단식 우승, 남자 4부 3위, 남자 4부 복식 준우승, 여자 신입생부 복식 우승(설국통합팀)"
     },
     {
       "date": "2026.05",
       "title": "대학탁구 전국대회 우승",
-      "description": "남자 4부 복식, 남자 신입생부 우승",
+      "description": "남자 4부 복식 우승",
       "type": "award",
       "highlight": false
     },
@@ -43,9 +45,9 @@
     {
       "date": "2024.09",
       "title": "전국대회 준우승",
-      "description": "전국대학탁구대회 T3(T3.s) 경희대학교 종합 '준우승'",
+      "description": "전국대학탁구대회 경희대학교 종합 '준우승'",
       "type": "award",
-      "highlight": false
+      "highlight": true
     },
     {
       "date": "2024.07",
