@@ -39,7 +39,8 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="images/hero-team.jpg" alt="T3.s 단체 사진" class="hero-bg-img">
+            <!-- 대문 사진은 /admin 대시보드(content/site-images.json)에서 교체할 수 있습니다 -->
+            <img src="images/hero-team.jpg" alt="T3.s 단체 사진" class="hero-bg-img" id="heroBgImage">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -98,7 +99,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/about-team.jpg" alt="T3.s 팀 활동 사진" loading="lazy">
+                    <!-- 소개 사진은 /admin 대시보드(content/site-images.json)에서 교체할 수 있습니다 -->
+                    <img src="images/about-team.jpg" alt="T3.s 팀 활동 사진" loading="lazy" id="aboutImage">
                 </div>
             </div>
         </div>
@@ -399,8 +401,8 @@
                             <p>VICTAS 제품을 공급 원가(정가 반값 수준)에 구매 가능. 매월 3째 주 수요일까지 신청.</p>
                         </div>
                         <div class="benefit-card">
-                            <h4>우수부원 선발</h4>
-                            <p>매 학기 활동량 기준으로 최대 3명 선발. 최우수부원에게 라켓+러버+유니폼 세트 지급 (40~50만원 상당).</p>
+                            <h4>앰버서더 선발</h4>
+                            <p>매 학기 활동량 기준으로 최대 3명의 부원을 VICTAS 앰버서더로 선발. 최우수 부원에게는 라켓+러버+유니폼 세트 지급 (40~50만원 상당).</p>
                         </div>
                         <div class="benefit-card">
                             <h4>리그전 상품</h4>
@@ -409,10 +411,11 @@
                     </div>
                 </div>
                 <div class="outstanding-member">
-                    <h3>VICTAS 우수부원</h3>
-                    <p class="outstanding-desc">매 학기 활동량과 대회 실적을 종합하여 우수부원을 선발합니다. 입상 경력이 없어도 활동량만으로 충분히 선정 가능합니다.</p>
+                    <h3>VICTAS 앰버서더 선발</h3>
+                    <p class="outstanding-desc">매 학기 활동량과 대회 실적을 종합하여 우수 부원을 VICTAS 앰버서더로 선발합니다. 입상 경력이 없어도 활동량만으로 충분히 선정 가능합니다.</p>
+                    <!-- 이 사진은 학기마다 /admin 대시보드(content/site-images.json)에서 교체합니다 -->
                     <div class="outstanding-image">
-                        <img src="images/victas-outstanding.jpg" alt="VICTAS 우수부원 선발" loading="lazy">
+                        <img src="images/victas-outstanding.jpg" alt="VICTAS 앰버서더 선발" loading="lazy" id="ambassadorImage">
                     </div>
                 </div>
             </div>
