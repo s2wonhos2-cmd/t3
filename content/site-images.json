@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "image": "/images/hero-team.jpg",
+    "alt": "T3.s 단체 사진"
+  },
+  "about": {
+    "image": "/images/about-team.jpg",
+    "alt": "T3.s 팀 활동 사진"
+  },
+  "ambassador": {
+    "image": "/images/victas-outstanding.jpg",
+    "alt": "VICTAS 앰버서더 선발"
+  }
+}
