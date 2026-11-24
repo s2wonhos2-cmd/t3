@@ -1,0 +1,86 @@
+{
+  "stats": [
+    { "number": "27", "label": "대회 출전" },
+    { "number": "26", "label": "입상 대회" },
+    { "number": "2025", "label": "중앙동아리 승격" }
+  ],
+  "timeline": [
+    {
+      "date": "2026.08",
+      "title": "한국학생선수권대회 단체전 준우승",
+      "description": "남자 단체전 상위부 준우승",
+      "type": "award",
+      "highlight": false
+    },
+    {
+      "date": "2026.08",
+      "title": "한국학생선수권대회 우승",
+      "description": "남자 2부, 남자 3부, 남자 3부 복식 우승",
+      "type": "award",
+      "highlight": true
+    },
+    {
+      "date": "2026.05",
+      "title": "대학탁구 전국대회 우승",
+      "description": "남자 4부 복식, 남자 신입생부 우승",
+      "type": "award",
+      "highlight": false
+    },
+    {
+      "date": "2025.11",
+      "title": "중앙동아리 승격",
+      "description": "서울캠퍼스 T3.s 정식 중앙동아리 승격 (최단 기간)",
+      "type": "history",
+      "highlight": true
+    },
+    {
+      "date": "2025.11",
+      "title": "전국대회 우승",
+      "description": "전국대학탁구대회 경희대학교 T3.s 우승 (남자 신입생부)",
+      "type": "award",
+      "highlight": false
+    },
+    {
+      "date": "2024.09",
+      "title": "전국대회 준우승",
+      "description": "전국대학탁구대회 T3(T3.s) 경희대학교 종합 '준우승'",
+      "type": "award",
+      "highlight": false
+    },
+    {
+      "date": "2024.07",
+      "title": "가등록 중앙동아리",
+      "description": "가등록 중앙동아리 등록",
+      "type": "history",
+      "highlight": false
+    },
+    {
+      "date": "2021.09",
+      "title": "T3.s 창단",
+      "description": "T3.s 활동 시작 (T3 서울캠퍼스 운영 본부)",
+      "type": "history",
+      "highlight": true
+    },
+    {
+      "date": "2008",
+      "title": "전국대회 우승",
+      "description": "전국대학탁구대회 우승 (남자 1부)",
+      "type": "award",
+      "highlight": false
+    },
+    {
+      "date": "2003",
+      "title": "T3 창단",
+      "description": "경희대 탁구동아리 'T3'이 기존 탁구동아리 계승",
+      "type": "history",
+      "highlight": false
+    },
+    {
+      "date": "1980",
+      "title": "탁구동아리 시작",
+      "description": "탁구동아리 'AllRound', 경희탁구반 활동 시작",
+      "type": "history",
+      "highlight": false
+    }
+  ]
+}
