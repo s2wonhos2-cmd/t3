@@ -8,7 +8,7 @@ backend:
   name: github
   repo: s2wonhos2-cmd/t3   # ← 실제 GitHub 저장소로 변경 (예: khu-t3s/t3s-homepage)
   branch: main                          # ← 배포 브랜치 (master라면 변경)
-  base_url: https://t3-one-bay.vercel.app  # ← 실제 배포 주소로 변경 (끝에 / 없이)
+  base_url: https://khu-t3-seoul.vercel.app  # ← 실제 배포 주소로 변경 (끝에 / 없이)
   auth_endpoint: api/auth
   commit_messages:
     update: "관리자: {{collection}} '{{slug}}' 수정"
@@ -19,8 +19,8 @@ backend:
 local_backend: true
 
 locale: ko
-site_url: https://t3-one-bay.vercel.app
-display_url: https://t3-one-bay.vercel.app
+site_url: https://khu-t3-seoul.vercel.app
+display_url: https://khu-t3-seoul.vercel.app
 logo_url: ""
 
 media_folder: images/uploads
