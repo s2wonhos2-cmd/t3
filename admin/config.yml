@@ -77,6 +77,35 @@ collections:
                 hint: 켜면 타임라인 점이 크게 표시됩니다 (중요한 기록에만 사용)
 
       # ---------------------------------------------------------
+      # 대문 · 소개 · VICTAS 앰버서더 사진 (content/site-images.json)
+      # ---------------------------------------------------------
+      - name: site-images
+        label: 메인 사진 관리 (대문 · 소개 · VICTAS 앰버서더)
+        file: content/site-images.json
+        fields:
+          - label: 대문(히어로) 사진
+            name: hero
+            widget: object
+            hint: 홈페이지 맨 위 배경 사진입니다. 가로가 긴 사진이 잘 어울립니다.
+            fields:
+              - { label: 사진, name: image, widget: image, choose_url: false }
+              - { label: 대체 텍스트, name: alt, widget: string, required: false, hint: "사진 설명 (예: T3.s 단체 사진)" }
+          - label: 동아리 소개 사진
+            name: about
+            widget: object
+            hint: "'동아리 소개' 섹션 오른쪽에 표시되는 사진입니다."
+            fields:
+              - { label: 사진, name: image, widget: image, choose_url: false }
+              - { label: 대체 텍스트, name: alt, widget: string, required: false, hint: "사진 설명 (예: T3.s 팀 활동 사진)" }
+          - label: VICTAS 앰버서더 선발 사진
+            name: ambassador
+            widget: object
+            hint: 매 학기 선발된 앰버서더 사진으로 교체해주세요. (후원사 섹션 하단)
+            fields:
+              - { label: 사진, name: image, widget: image, choose_url: false }
+              - { label: 대체 텍스트, name: alt, widget: string, required: false, hint: "사진 설명 (예: 2026-2학기 VICTAS 앰버서더 홍길동)" }
+
+      # ---------------------------------------------------------
       # 활동 갤러리 (content/gallery.json)
       # ---------------------------------------------------------
       - name: gallery
