@@ -1,0 +1,100 @@
+# =============================================================
+#  T3.s 관리자 대시보드 설정 (Decap CMS)
+#  - 접속 주소: https://<배포주소>/admin
+#  - 저장하면 GitHub 저장소에 커밋 → Vercel이 자동 재배포 (약 30초~1분)
+# =============================================================
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-ID/YOUR-REPO-NAME   # ← 실제 GitHub 저장소로 변경 (예: khu-t3s/t3s-homepage)
+  branch: main                          # ← 배포 브랜치 (master라면 변경)
+  base_url: https://YOUR-SITE.vercel.app  # ← 실제 배포 주소로 변경 (끝에 / 없이)
+  auth_endpoint: api/auth
+  commit_messages:
+    update: "관리자: {{collection}} '{{slug}}' 수정"
+    uploadMedia: "관리자: 사진 업로드 '{{path}}'"
+    deleteMedia: "관리자: 사진 삭제 '{{path}}'"
+
+# 로컬 테스트용: `npx decap-server` 실행 후 http://localhost:<포트>/admin 접속 시 로그인 없이 편집 가능
+local_backend: true
+
+locale: ko
+site_url: https://YOUR-SITE.vercel.app
+display_url: https://YOUR-SITE.vercel.app
+logo_url: ""
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: homepage
+    label: 홈페이지 콘텐츠
+    editor:
+      preview: false
+    files:
+      # ---------------------------------------------------------
+      # 수상기록 · 연혁 (content/awards.json)
+      # ---------------------------------------------------------
+      - name: awards
+        label: 수상기록 · 연혁
+        file: content/awards.json
+        fields:
+          - label: 히어로 통계 (메인 화면 숫자)
+            name: stats
+            widget: list
+            summary: "{{fields.number}} · {{fields.label}}"
+            hint: 메인 화면 상단에 표시되는 숫자입니다. 대회 출전/입상 수가 바뀌면 함께 수정하세요.
+            fields:
+              - { label: 숫자, name: number, widget: string }
+              - { label: 설명, name: label, widget: string }
+
+          - label: 연혁 · 수상기록
+            name: timeline
+            widget: list
+            add_to_top: true
+            summary: "{{fields.date}} · {{fields.title}}"
+            hint: 새 항목은 맨 위에 추가됩니다. 홈페이지에서는 날짜 순서대로 자동 정렬되어 표시됩니다.
+            fields:
+              - label: 날짜
+                name: date
+                widget: string
+                hint: "예: 2026.11 (연도만 쓰려면 2026)"
+                pattern: ['^\d{4}(\.\d{2})?$', '"2026.11" 또는 "2026" 형식으로 입력해주세요']
+              - label: 구분
+                name: type
+                widget: select
+                default: award
+                options:
+                  - { label: 수상, value: award }
+                  - { label: 연혁, value: history }
+              - { label: 제목, name: title, widget: string, hint: "예: 전국대학탁구대회 우승" }
+              - { label: 상세 내용, name: description, widget: string, required: false, hint: "예: 남자 3부 단식 우승, 남자 복식 준우승" }
+              - label: 강조 표시
+                name: highlight
+                widget: boolean
+                default: false
+                required: false
+                hint: 켜면 타임라인 점이 크게 표시됩니다 (중요한 기록에만 사용)
+
+      # ---------------------------------------------------------
+      # 활동 갤러리 (content/gallery.json)
+      # ---------------------------------------------------------
+      - name: gallery
+        label: 활동 갤러리 사진
+        file: content/gallery.json
+        fields:
+          - label: 사진 목록
+            name: items
+            widget: list
+            add_to_top: true
+            summary: "{{fields.caption}}"
+            hint: 위에 있는 사진부터 홈페이지에 표시됩니다. 드래그해서 순서를 바꿀 수 있어요. 사진은 1MB 이하(가로 1600px 정도)를 권장합니다.
+            fields:
+              - { label: 사진, name: image, widget: image, choose_url: false }
+              - { label: 캡션, name: caption, widget: string, required: false, hint: 사진 위에 마우스를 올리면 보이는 문구 }
+              - { label: 대체 텍스트, name: alt, widget: string, required: false, hint: "사진 설명 (시각장애인용·검색엔진용, 예: 2026 학생선수권 단체 사진)" }
+              - label: 크게 표시 (2칸)
+                name: large
+                widget: boolean
+                default: false
+                required: false
