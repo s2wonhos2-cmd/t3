@@ -148,14 +148,35 @@ function renderGallery(items) {
     }));
 }
 
+// 사진이 교체된 직후 잠시 구버전(index.html 기본값) 사진이 보였다가 새 사진으로 바뀌는 '깜박임'을 막기 위해,
+// .js-photo 클래스가 붙은 사진은 기본적으로 숨겨두고(styles.css) 정확한 사진이 준비되면 'is-ready'를 붙여 페이드인합니다.
+function revealPhoto(img) {
+    if (img) img.classList.add('is-ready');
+}
+
 function renderSiteImage(elId, data) {
-    // data가 없거나 image 값이 없으면 index.html에 적혀있는 기본 사진을 그대로 유지합니다.
-    if (!data || !data.image) return;
     const img = document.getElementById(elId);
     if (!img) return;
+
+    // content/site-images.json 에 값이 없으면 index.html에 적혀있는 기본 사진을 그대로 노출합니다.
+    if (!data || !data.image) {
+        revealPhoto(img);
+        return;
+    }
+
+    // 새 사진 로드(또는 실패) 완료 후에만 노출해야 '원래 사진 → 새 사진' 깜박임이 사라집니다.
+    img.addEventListener('load', () => revealPhoto(img), { once: true });
+    img.addEventListener('error', () => revealPhoto(img), { once: true });
     img.src = data.image;
     if (data.alt) img.alt = data.alt;
+    if (img.complete) revealPhoto(img); // 이미 캐시된 경우 load 이벤트가 안 일어날 수 있음
 }
+
+// 안전장치: 네트워크 장애 등으로 loadSiteContent가 오래 걸려도,
+// 일정 시간 후에는 숨겨진 사진이 계속 안 보이는 상황을 방지합니다.
+setTimeout(() => {
+    ['heroBgImage', 'aboutImage', 'ambassadorImage'].forEach(id => revealPhoto(document.getElementById(id)));
+}, 2500);
 
 async function loadSiteContent() {
     const [awards, gallery, siteImages] = await Promise.allSettled([
@@ -183,6 +204,7 @@ async function loadSiteContent() {
         renderSiteImage('ambassadorImage', siteImages.value.ambassador);
     } else {
         console.error(siteImages.reason);
+        ['heroBgImage', 'aboutImage', 'ambassadorImage'].forEach(id => revealPhoto(document.getElementById(id)));
     }
 }
 
