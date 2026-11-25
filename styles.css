@@ -258,6 +258,18 @@ ul {
     object-fit: cover;
 }
 
+/* 관리자 대시보드에서 교체한 사진(대문·소개·VICTAS 앰버서더)은 script.js가
+   content/site-images.json을 불러와 적용할 때까지 숨겨두어,
+   index.html에 적혀있는 원본 사진이 잠깐 노출되는 '깜박임'을 막습니다. */
+.js-photo {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.js-photo.is-ready {
+    opacity: 1;
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
