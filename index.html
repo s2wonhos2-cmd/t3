@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T3.s | 경희대학교 서울캠퍼스 중앙탁구동아리</title>
     <meta name="description" content="경희대학교 서울캠퍼스 유일의 탁구 전문 중앙동아리 T3.s - VICTAS 스폰서십 체결, 전국대학탁구대회 다수 입상">
+    <!-- 링크 공유 시 미리보기 썸네일(카카오톡/슬랙 등)에 사용되는 Open Graph 태그.
+         og:image는 /api/og-image 로 연결되어 있어, /admin 에서 대문(히어로) 사진을 바꾸면
+         재배포 후 썸네일도 함께 자동으로 바뀝니다. -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khu-t3-seoul.vercel.app/">
+    <meta property="og:title" content="T3.s | 경희대학교 서울캠퍼스 중앙탁구동아리">
+    <meta property="og:description" content="경희대학교 서울캠퍼스 유일의 탁구 전문 중앙동아리 T3.s - VICTAS 스폰서십 체결, 전국대학탁구대회 다수 입상">
+    <meta property="og:image" content="https://khu-t3-seoul.vercel.app/api/og-image?key=hero">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="T3.s | 경희대학교 서울캠퍼스 중앙탁구동아리">
+    <meta name="twitter:description" content="경희대학교 서울캠퍼스 유일의 탁구 전문 중앙동아리 T3.s - VICTAS 스폰서십 체결, 전국대학탁구대회 다수 입상">
+    <meta name="twitter:image" content="https://khu-t3-seoul.vercel.app/api/og-image?key=hero">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -29,6 +43,7 @@
                 <li><a href="#history" class="nav-link">연혁</a></li>
                 <li><a href="#activities" class="nav-link">동아리 활동</a></li>
                 <li><a href="#training" class="nav-link">정기 훈련</a></li>
+                <li><a href="https://script.google.com/a/macros/khu.ac.kr/s/AKfycbyU6z7katGkUfUQtMco5iytBco_TQQngv63Dp0wrsNKf5tO3-U9sj37t9_QJUkANf2b/exec" target="_blank" rel="noopener noreferrer" class="nav-link">정기모임 신청</a></li>
                 <li><a href="#events" class="nav-link">행사</a></li>
                 <li><a href="#sponsor" class="nav-link">후원사</a></li>
                 <li><a href="https://forms.gle/kYTTMtoNsH5cjTpa6" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--cta">가입 신청</a></li>
@@ -40,11 +55,11 @@
     <section class="hero" id="hero">
         <div class="hero-bg">
             <!-- 대문 사진은 /admin 대시보드(content/site-images.json)에서 교체할 수 있습니다 -->
-            <img src="images/hero-team.jpg" alt="T3.s 단체 사진" class="hero-bg-img" id="heroBgImage">
+            <img src="images/hero-team.jpg" alt="T3.s 단체 사진" class="hero-bg-img js-photo" id="heroBgImage">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-badge">VICTAS Sponsored / Since 2021</p>
+            <p class="hero-badge">VICTAS Sponsored / Since 2003</p>
             <h1 class="hero-title">
                 <span class="hero-title-sub">경희대학교 서울캠퍼스 중앙탁구동아리</span>
                 <span class="hero-title-main">T3.s</span>
@@ -100,7 +115,7 @@
                 </div>
                 <div class="about-image">
                     <!-- 소개 사진은 /admin 대시보드(content/site-images.json)에서 교체할 수 있습니다 -->
-                    <img src="images/about-team.jpg" alt="T3.s 팀 활동 사진" loading="lazy" id="aboutImage">
+                    <img src="images/about-team.jpg" alt="T3.s 팀 활동 사진" loading="lazy" id="aboutImage" class="js-photo">
                 </div>
             </div>
         </div>
@@ -189,8 +204,9 @@
                         </div>
                         <div class="training-detail-card">
                             <h4>신청 방법</h4>
-                            <p>매주 토요일 19시 '정기모임 신청 시스템' 웹앱 신청</p>
+                            <p>매주 토요일 19시 카카오톡 투표</p>
                             <p>(일자별 18명 제한, 선착순)</p>
+                            <p><a href="https://script.google.com/a/macros/khu.ac.kr/s/AKfycbyU6z7katGkUfUQtMco5iytBco_TQQngv63Dp0wrsNKf5tO3-U9sj37t9_QJUkANf2b/exec" target="_blank" rel="noopener noreferrer"><strong>정기모임 신청 시스템(웹앱)</strong></a>에서도 신청할 수 있습니다.</p>
                         </div>
                     </div>
 
@@ -415,7 +431,7 @@
                     <p class="outstanding-desc">매 학기 활동량과 대회 실적을 종합하여 우수 부원을 VICTAS 앰버서더로 선발합니다. 입상 경력이 없어도 활동량만으로 충분히 선정 가능합니다.</p>
                     <!-- 이 사진은 학기마다 /admin 대시보드(content/site-images.json)에서 교체합니다 -->
                     <div class="outstanding-image">
-                        <img src="images/victas-outstanding.jpg" alt="VICTAS 앰버서더 선발" loading="lazy" id="ambassadorImage">
+                        <img src="images/victas-outstanding.jpg" alt="VICTAS 앰버서더 선발" loading="lazy" id="ambassadorImage" class="js-photo">
                     </div>
                 </div>
             </div>
